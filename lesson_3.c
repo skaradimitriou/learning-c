@@ -2,6 +2,11 @@
 #include <string.h>
 
 /*
+ * This was a C lesson 2 by Alepis Efthymios on 8/12.
+ * Topics Discussed: Strings, struct, union
+ */
+
+/*
  * Struct vs Union
  * -------
  * A struct is a block of memory that stores several data objects, where those objects don't overlap.
@@ -9,7 +14,7 @@
  * of these, and thus can only store one of the data objects at any one time.
  */
 
-struct Employee{
+struct Employee {
     char name[50];
     char surname[50];
     char jobDesc[50];
@@ -17,8 +22,8 @@ struct Employee{
 };
 
 union User {
-    char username [30];
-    char email [50];
+    char username[30];
+    char email[50];
 };
 
 void printEmployeeDetails(struct Employee);
@@ -43,18 +48,18 @@ int main() {
 
     struct Employee employee1;
 
-    strcpy(employee1.name,"Stathis");
-    strcpy(employee1.surname,"Karadimitriou");
-    strcpy(employee1.jobDesc,"Jr. Software Engineer");
+    strcpy(employee1.name, "Stathis");
+    strcpy(employee1.surname, "Karadimitriou");
+    strcpy(employee1.jobDesc, "Jr. Software Engineer");
     employee1.AFM = 12345;
 
     printEmployeeDetails(employee1);
 
     struct Employee employee2;
 
-    strcpy(employee2.name,"John");
-    strcpy(employee2.surname,"Doe");
-    strcpy(employee2.jobDesc,"UI/UX Designer");
+    strcpy(employee2.name, "John");
+    strcpy(employee2.surname, "Doe");
+    strcpy(employee2.jobDesc, "UI/UX Designer");
     employee2.AFM = 345678;
 
     printEmployeeDetails(employee1);
@@ -75,14 +80,14 @@ int main() {
 /*
  * output template for each employee that needs to be shown to console
  */
-void printEmployeeDetails(struct Employee employee){
+void printEmployeeDetails(struct Employee employee) {
     printf("--------------------------------------\n");
     printf("Employee details bellow:\n");
     printf("\n");
-    printf("Employee name: %s\n",employee.name);
-    printf("Employee surname: %s\n",employee.surname);
-    printf("Employee job title: %s\n",employee.jobDesc);
-    printf("Employee AFM: %d\n",employee.AFM);
+    printf("Employee name: %s\n", employee.name);
+    printf("Employee surname: %s\n", employee.surname);
+    printf("Employee job title: %s\n", employee.jobDesc);
+    printf("Employee AFM: %d\n", employee.AFM);
     printf("\n");
     printf("--------------------------------------\n");
 }
