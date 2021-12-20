@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+/*
+ *  Challenges in arrays
+ *
+ *  1. Get max/min element from given array
+ *  2. Search for a number in given array
+ *  3. Get second MaxNo/MinNo from given array
+ *  4. Max/Min from 2 given arrays
+ *
+ */
+
 void getMaxNoFromArray(int myIntArray[6]);
 
 void getMinNoFromArray(int myIntArray[6]);
