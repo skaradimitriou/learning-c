@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 struct student {
     int am;
@@ -7,11 +8,10 @@ struct student {
 };
 
 int main() {
-    struct student s1, s2;
     struct student *pts1, *pts2; //pointers
 
-    pts1 = &s1;
-    pts2 = &s2;
+    pts1 = (struct student*)malloc(sizeof(struct student));
+    pts2 = (struct student*)malloc(sizeof(struct student));
 
     // (*pts1) is the same as s1
     // (*pts1) is the same as pts1->
