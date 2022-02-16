@@ -6,7 +6,7 @@ struct student {
     char lastName[50];
 };
 
-int main() {
+int main10() {
     struct student s1, s2;
     struct student *pts1, *pts2; //pointers
 
